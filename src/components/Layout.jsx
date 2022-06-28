@@ -10,7 +10,7 @@ export default function Layout(props) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Wrapper className="my-8 mx-8">
+      <Wrapper className="my-2 mx-4">
         <Product />
       </Wrapper>
     </div>
