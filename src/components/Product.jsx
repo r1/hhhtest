@@ -1,60 +1,62 @@
-import React, { ReactNode, useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export default function Product() {
+  const [checked, setChecked] = useState(false);
+  const [checked2, setChecked2] = useState(true);
+
   return (
-    <div className="max-w-sm mx-auto bg-white overflow-auto">
+    <div className="mx-auto max-w-sm overflow-auto bg-white">
       <img src="https://hhh-test.vercel.app/images/1.png" alt="" />
       <div className="grid grid-cols-6 py-4 px-3">
         <button>
           <img
             src="https://hhh-test.vercel.app/images/1.png"
             alt=""
-            className="rounded-[4px] w-[3rem] border border-[#9A1320]"
+            className="w-[3rem] rounded-[4px] border border-[#9A1320]"
           />
         </button>
         <button>
           <img
             src="https://hhh-test.vercel.app/images/2.png"
             alt=""
-            className="rounded-[4px] w-[3rem]"
+            className="w-[3rem] rounded-[4px]"
           />
         </button>
         <button>
           <img
             src="https://hhh-test.vercel.app/images/3.png"
             alt=""
-            className="rounded-[4px] w-[3rem]"
+            className="w-[3rem] rounded-[4px]"
           />
         </button>
         <button>
           <img
-            src="https://hhh-test.vercel.app/images/4.png"
+            src="https://hhh-test.vercel.app/images/placeholder.png"
             alt=""
-            className="rounded-[4px] w-[3rem]"
+            className="w-[3rem] rounded-[4px]"
           />
         </button>
         <button>
           <img
-            src="https://hhh-test.vercel.app/images/4.png"
+            src="https://hhh-test.vercel.app/images/placeholder.png"
             alt=""
-            className="rounded-[4px] w-[3rem]"
+            className="w-[3rem] rounded-[4px]"
           />
         </button>
-        <button className="mr-3">
+        <button>
           <img
-            src="https://hhh-test.vercel.app/images/4.png"
+            src="https://hhh-test.vercel.app/images/placeholder.png"
             alt=""
-            className="rounded-[4px] w-[3rem]"
+            className="w-[3rem] rounded-[4px]"
           />
         </button>
       </div>
-      <div className="border-t mb-4 py-4 px-5">
+      <div className="mb-4 border-t px-5 pt-4">
         <h2 className="leaguegothic-regular text-[2.7rem] leading-none text-[#9A1320]">
           ENERGY
         </h2>
-        <div className="flex flex-row mt-1 items-center space-x-3">
+        <div className="mt-1 flex flex-row items-center space-x-3">
           <div className="flex flex-row space-x-1">
             <svg
               width="18"
@@ -118,15 +120,18 @@ export default function Product() {
               />
             </svg>
           </div>
-          <span className="underline decoration-2 hkgrotesk-semibold text-[1.1rem] leading-1 text-[#9A1320] overflow-auto">
+          <a
+            href="/"
+            className="hkgrotesk-semibold leading-1 overflow-auto text-[1rem] text-[#9A1320] underline decoration-[#9a132083] decoration-2"
+          >
             4503 Reviews
-          </span>
+          </a>
         </div>
-        <div className="flex flex-col mt-2">
+        <div className="mt-2 flex flex-col">
           <h2 className="hkgrotesk-semibold text-lg text-[#9A1320]">
             For natural crash-free energy.
           </h2>
-          <h3 className="mt-1 hkgrotesk-regular text-md text-[#8C595E]">
+          <h3 className="hkgrotesk-regular text-md mt-1 text-[#8C595E]">
             + A targeted blend of 11 nutrients
           </h3>
           <h3 className="hkgrotesk-regular text-md text-[#8C595E]">
@@ -136,41 +141,52 @@ export default function Product() {
             + Natural rasberry flavour
           </h3>
           <div className="mt-4 space-y-3">
-            <div class="flex items-center border border-[#E5E9EA] py-3 px-3 rounded-lg">
-              <input type="checkbox" value="" className="checkmark" />
-              <label class="text-[#9A1320] ml-2 text-lg hkgrotesk-semibold">
+            <div
+              className="flex cursor-pointer select-none items-center rounded-lg border border-[#E5E9EA] py-4 px-3"
+              onClick={() => setChecked(!checked)}
+            >
+              <input
+                type="checkbox"
+                value=""
+                className="checkmark"
+                checked={checked}
+              />
+              <label className="hkgrotesk-semibold ml-2 cursor-pointer text-lg text-[#9A1320]">
                 One-time Purchase
               </label>
-              <div className="flex flex-col leading-5 ml-14 items-center">
-                <label className="text-[#9A1320] text-lg justify-end hkgrotesk-semibold">
-                  £18.99
-                </label>
-                <label className="text-[#9A1320] text-[0.55rem] leading-3 justify-end hkgrotesk-semibold">
+              <div className="mr-0 ml-auto flex flex-col items-center">
+                <span className="hkgrotesk-semibold cursor-pointer justify-end text-lg leading-6 text-[#9A1320]">
+                  £18.<span className="text-sm">99</span>
+                </span>
+                <span className="hkgrotesk-semibold cursor-pointer justify-end text-[0.55rem] leading-3 text-[#9A1320]">
                   ONE-TIME
-                </label>
+                </span>
               </div>
             </div>
-            <div className="border border-[#FF542F] rounded-lg">
-              <div className="flex items-center py-3 px-3">
+            <div
+              className="cursor-pointer select-none rounded-lg border border-[#FF542F]"
+              onClick={() => setChecked2(!checked2)}
+            >
+              <div className="flex items-center py-3 px-4">
                 <input
                   type="checkbox"
                   value=""
                   className="checkmark"
-                  checked="checked"
+                  checked={checked2}
                 />
-                <label class="text-[#9A1320] ml-2 text-lg hkgrotesk-semibold">
+                <label className="hkgrotesk-semibold ml-2 cursor-pointer select-none text-lg text-[#9A1320]">
                   Subscribe & Save 10%
                 </label>
-                <div className="flex flex-col leading-5 ml-9 items-center">
-                  <label className="text-[#9A1320] text-lg justify-end hkgrotesk-semibold">
-                    £16.99
-                  </label>
-                  <label className="text-[#9A1320] text-[0.55rem] leading-3 justify-end hkgrotesk-semibold">
+                <div className="mr-0 ml-auto flex flex-col items-center">
+                  <span className="hkgrotesk-semibold cursor-pointer justify-end text-lg leading-6 text-[#9A1320]">
+                    £16.<span className="text-sm">99</span>
+                  </span>
+                  <span className="hkgrotesk-semibold cursor-pointer justify-end text-[0.55rem] leading-3 text-[#9A1320]">
                     PER MONTH
-                  </label>
+                  </span>
                 </div>
               </div>
-              <div className="flex flex-row bg-[#FF542F] items-center py-1 justify-center space-x-4 rounded-b-[5px] w-full">
+              <div className="flex w-full flex-row items-center justify-center space-x-4 rounded-b-[5px] bg-[#FF542F] py-1">
                 <div className="flex items-center space-x-2">
                   <svg
                     width="21"
@@ -195,7 +211,7 @@ export default function Product() {
                     />
                   </svg>
 
-                  <span className="uppercase text-white hkgrotesk-semibold text-xs">
+                  <span className="hkgrotesk-semibold text-xs uppercase text-white">
                     Cancel Anytime
                   </span>
                 </div>
@@ -223,13 +239,13 @@ export default function Product() {
                     />
                   </svg>
 
-                  <span className="uppercase text-white hkgrotesk-semibold text-xs">
+                  <span className="hkgrotesk-semibold text-xs uppercase text-white">
                     Free Delivery
                   </span>
                 </div>
               </div>
             </div>
-            <button className="bg-[#FF542F] rounded-full w-full items-center py-2 text-white hkgrotesk-semibold">
+            <button className="hkgrotesk-semibold w-full items-center rounded-full bg-[#FF542F] py-2 text-white">
               Add to Cart <span className="hkgrotesk-regular">(£16.99)</span>
             </button>
           </div>

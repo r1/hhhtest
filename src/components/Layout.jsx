@@ -3,14 +3,14 @@ import Head from "next/head";
 import styled from "styled-components";
 import Product from "./Product";
 
-export default function Layout(props) {
+export default function Layout() {
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Wrapper className="my-2 mx-4">
+      <Wrapper className="py-4">
         <Product />
       </Wrapper>
     </div>

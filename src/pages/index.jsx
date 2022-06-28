@@ -1,15 +1,8 @@
-import React, { useEffect, useContext } from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 export default function Home() {
-  
-  return (
-    <Wrapper>
-      Hello World
-    </Wrapper>
-  )
+  return <Wrapper />;
 }
 
-const Wrapper = styled.div`
-
-`;
+const Wrapper = styled.div``;
