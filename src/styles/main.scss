@@ -53,6 +53,10 @@ body {
   cursor: pointer;
 }
 
-input:checked ~ .checkmark {
-  background-color: #2196F3;
+
+.checkmark:checked {
+  background-color: #fd4b1f;
+  background-image: url(/svg/checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
