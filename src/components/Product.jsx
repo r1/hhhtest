@@ -7,48 +7,48 @@ export default function Product() {
     <div className="max-w-sm mx-auto bg-white overflow-auto">
       <img src="https://hhh-test.vercel.app/images/1.png" alt="" />
       <div className="grid grid-cols-6 py-4 px-3">
-        <div>
+        <button>
           <img
             src="https://hhh-test.vercel.app/images/1.png"
             alt=""
             className="rounded-[4px] w-[3rem] border border-[#9A1320]"
           />
-        </div>
-        <div>
+        </button>
+        <button>
           <img
             src="https://hhh-test.vercel.app/images/2.png"
             alt=""
             className="rounded-[4px] w-[3rem]"
           />
-        </div>
-        <div>
+        </button>
+        <button>
           <img
             src="https://hhh-test.vercel.app/images/3.png"
             alt=""
             className="rounded-[4px] w-[3rem]"
           />
-        </div>
-        <div>
+        </button>
+        <button>
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
             className="rounded-[4px] w-[3rem]"
           />
-        </div>
-        <div>
+        </button>
+        <button>
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
             className="rounded-[4px] w-[3rem]"
           />
-        </div>
-        <div className="mr-3">
+        </button>
+        <button className="mr-3">
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
             className="rounded-[4px] w-[3rem]"
           />
-        </div>
+        </button>
       </div>
       <div className="border-t mb-4 py-4 px-5">
         <h2 className="leaguegothic-regular text-[2.7rem] leading-none text-[#9A1320]">
