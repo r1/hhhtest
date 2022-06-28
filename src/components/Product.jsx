@@ -6,47 +6,47 @@ export default function Product() {
   return (
     <div className="max-w-sm mx-auto bg-white overflow-auto">
       <img src="https://hhh-test.vercel.app/images/1.png" alt="" />
-      <div className="grid grid-cols-6 py-4 px-2 space-x-3">
-        <div className="ml-3">
+      <div className="grid grid-cols-6 py-4 px-3">
+        <div>
           <img
             src="https://hhh-test.vercel.app/images/1.png"
             alt=""
-            className="rounded-[4px] border border-[#9A1320] w-[80rem]"
+            className="rounded-[4px] w-[3rem] border border-[#9A1320]"
           />
         </div>
         <div>
           <img
             src="https://hhh-test.vercel.app/images/2.png"
             alt=""
-            className="rounded-[4px]"
+            className="rounded-[4px] w-[3rem]"
           />
         </div>
         <div>
           <img
             src="https://hhh-test.vercel.app/images/3.png"
             alt=""
-            className="rounded-[4px]"
+            className="rounded-[4px] w-[3rem]"
           />
         </div>
         <div>
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
-            className="rounded-[4px]"
+            className="rounded-[4px] w-[3rem]"
           />
         </div>
         <div>
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
-            className="rounded-[4px]"
+            className="rounded-[4px] w-[3rem]"
           />
         </div>
-        <div>
+        <div className="mr-3">
           <img
             src="https://hhh-test.vercel.app/images/4.png"
             alt=""
-            className="rounded-[4px]"
+            className="rounded-[4px] w-[3rem]"
           />
         </div>
       </div>
