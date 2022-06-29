@@ -1,56 +1,85 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Navigation, Thumbs } from "swiper";
 export default function Product() {
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(true);
+  const [activeThumb, setActiveThumb] = useState();
+  const swiperSlide = useSwiperSlide();
 
   return (
-    <div className="mx-auto max-w-sm overflow-auto bg-white">
-      <img src="https://hhh-test.vercel.app/images/1.png" alt="" />
+    <div className="mx-auto max-w-sm overflow-hidden bg-white">
+      <Swiper
+        loop={true}
+        spaceBetween={10}
+        navigation={true}
+        modules={[Navigation, Thumbs]}
+        grabCursor={true}
+        thumbs={{ swiper: activeThumb }}
+        className="product-images-slider"
+      >
+        <SwiperSlide>
+          <img src="https://hhh-test.vercel.app/images/1.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://hhh-test.vercel.app/images/2.png" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://hhh-test.vercel.app/images/3.png" alt="" />
+        </SwiperSlide>
+      </Swiper>
       <div className="grid grid-cols-6 py-4 px-3">
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/1.png"
-            alt=""
-            className="w-[3rem] rounded-[4px] border border-[#9A1320]"
-          />
-        </button>
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/2.png"
-            alt=""
-            className="w-[3rem] rounded-[4px]"
-          />
-        </button>
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/3.png"
-            alt=""
-            className="w-[3rem] rounded-[4px]"
-          />
-        </button>
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/placeholder.png"
-            alt=""
-            className="w-[3rem] rounded-[4px]"
-          />
-        </button>
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/placeholder.png"
-            alt=""
-            className="w-[3rem] rounded-[4px]"
-          />
-        </button>
-        <button>
-          <img
-            src="https://hhh-test.vercel.app/images/placeholder.png"
-            alt=""
-            className="w-[3rem] rounded-[4px]"
-          />
-        </button>
+        <Swiper
+          onSwiper={setActiveThumb}
+          slidesPerView={8}
+          modules={[Navigation, Thumbs]}
+          watchSlidesVisibility={true}
+          className="relative w-[24rem]"
+        >
+          <SwiperSlide className="mr-3 ml-2 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/1.png"
+              alt=""
+              className="h-full w-full rounded-[2.6px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="mr-3 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/2.png"
+              alt=""
+              className="relative h-full w-full rounded-[2.6px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="mr-3 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/3.png"
+              alt=""
+              className="h-full w-full rounded-[2.6px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="mr-3 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/placeholder.png"
+              alt=""
+              className="w-[3rem] rounded-[4px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="mr-3 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/placeholder.png"
+              alt=""
+              className="w-[3rem] rounded-[4px]"
+            />
+          </SwiperSlide>
+          <SwiperSlide className="mr-3 rounded-[4px]">
+            <img
+              src="https://hhh-test.vercel.app/images/placeholder.png"
+              alt=""
+              className="w-[3rem] rounded-[4px]"
+            />
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className="mb-4 border-t px-5 pt-4">
         <h2 className="leaguegothic-regular text-[2.7rem] leading-none text-[#9A1320]">

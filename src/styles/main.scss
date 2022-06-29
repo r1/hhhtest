@@ -53,10 +53,25 @@ body {
   cursor: pointer;
 }
 
-
 .checkmark:checked {
   background-color: #fd4b1f;
   background-image: url(/svg/checkmark.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  visibility: hidden;
+}
+
+
+.swiper-slide-thumb-active {
+  border: 1px solid #9a1320;
+}
+
+img {
+  .swiper-slide-active {
+    border: 1px solid #9a1320;
+  }
 }
